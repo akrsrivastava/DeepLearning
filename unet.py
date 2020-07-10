@@ -77,12 +77,3 @@ def Unet():
 
 unet_model = Unet()
 
-unet_model.compile(tf.keras.optimizers.Adam(), loss="categorical_crossentropy", metrics =["accuracy"])
-
-
-input_ary = np.random.random((2,572,572,1))
-
-pred = unet_model(input_ary)
-
-print(pred.shape)
-pred
